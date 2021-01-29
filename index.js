@@ -84,6 +84,22 @@ class Airplane {
     this.tank = 0;
     this.odometer = 0;
     }
+
+    fill(gallons){
+      this.tank = this.tank + gallons;
+    }
+
+    drive(distance){
+      if(this.tank > 0){
+        this.odometer = (this.odometer + distance);
+      }
+    }
+
+    driveTankDecrease(){
+      if(this.tank > 0){
+        this.tank = tank
+      }
+    }
   }
   
   /*
@@ -99,7 +115,15 @@ class Airplane {
           + {name} and {location} of course come from the instance's own properties.
   */
  class Lambdasian {
-    
+    constructor({name, age, location}){
+      this.name = name;
+      this.age = age;
+      this.location = location;
+    }
+
+    speak(){
+      return `Hello my name is ${this.name}, I am from ${this.location}`;
+    }
   }
   
   /*
@@ -117,7 +141,14 @@ class Airplane {
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
  class Instructor {
-
+   constructor({name, age, location, specialty, favLanguage, catchPhrase}){
+    this.name = name;
+    this.age = age;
+    this.location = location;
+    this.specialty = specialty;
+    this.favLanguage = favLanguage;
+    this.catchPhrase = catchPhrase;
+   }
  }
   /*
     TASK 5
